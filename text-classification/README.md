@@ -1,4 +1,4 @@
-## Query Category Prediction
+## Text Classification
 
 The solution has two major parts: Data Science Model and Prediction Service API
 
