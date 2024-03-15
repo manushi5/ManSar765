@@ -15,3 +15,9 @@ The solution has two major parts: Data Science Model and Prediction Service API.
 3. To run the service locally, run the following commands:
 - make docker-build-serve
 - make docker-run-serve
+
+### Future Work
+
+1. I would re-run the model evaluation on a larger data set to make sure the metrics are stable.
+2. I would spend time on error analysis to understand the misclassified cases.
+3. If deploying pytorch model is problematic, ..... 
