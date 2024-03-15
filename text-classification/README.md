@@ -1,12 +1,12 @@
 ## Text Classification
 
-The solution has two major parts: Data Science Model and Prediction Service API
+The solution has two major parts: Data Science Model and Prediction Service API.
 
 ### Data Science Model
 
-1. Using huggingface[pytorch] library, I use a pretrained bert model and train on the given labeled data using Google colab GPU.
+1. Using huggingface[pytorch] library, I use a pretrained bert model and train on the given labeled data using Google colab GPU. The pretrained bert model is a good match for the given problem since it is fine tuned for sequence classification tasks such as text categorization. The only weights that will be updated during training are the weights of the classification head (the final layer) that is added on top of the pre-trained BERT model.
 2. The data contains some noisy queries which are removed in the data processing step.
-3. The model is evaluated using class wise confusion matrix.
+3. The model is evaluated using class wise confusion matrix along with classwise precision/recall/F1 score metrics.
 
 ### Prediction API
 
