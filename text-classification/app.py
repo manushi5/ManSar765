@@ -19,9 +19,9 @@ def startup_event() -> None:
 
 
 @app.get("/healthcheck")
-def healthcheck():
+def healthcheck() -> str:
     return {"status": "ok"}
 
 @app.post("/text-category")
-def get_text_category(request: TextCategoryRequest, response_model=TextCategoryResponse):
+def get_text_category(request: TextCategoryRequest, response_model=TextCategoryResponse) -> str:
     return model_router.predict(request.text)
