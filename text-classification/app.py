@@ -24,6 +24,4 @@ def healthcheck():
 
 @app.post("/text-category")
 def get_text_category(request: TextCategoryRequest, response_model=TextCategoryResponse):
-    # Your code to process the text and return its category using the pretrained Hugging Face model goes here
-    # You can access the text using request.text
     return model_router.predict(request.text)
